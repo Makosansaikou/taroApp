@@ -1,0 +1,6 @@
+大牌:0~21
+權杖1~權杖侍者 22~35
+聖杯1~聖杯侍者 36~49
+寶劍1~寶劍侍者 50~63
+錢幣1~錢幣侍者 64~77
+gpt-api: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
