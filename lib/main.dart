@@ -1,6 +1,5 @@
 // main.dart
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'dart:math';
 import 'package:http/http.dart' as http;
@@ -68,8 +67,9 @@ class _ResultPageState extends State<ResultPage>{
             ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-            primary: Color.fromARGB(255, 255, 82, 241), //background color of button
-            side: BorderSide(width:3, color:Colors.brown), //border width and color
+            minimumSize: Size(120, 50),
+            primary: Color.fromRGBO(170, 90, 191, 75), //background color of button
+            side: BorderSide(width:2, color:Colors.white), //border width and color
             elevation: 1, //elevation of button
             shape: RoundedRectangleBorder( //to set border radius to button
             borderRadius: BorderRadius.circular(15)
@@ -304,12 +304,13 @@ class _HomePageState extends State with SingleTickerProviderStateMixin {
               ),
             ),
             SizedBox(
-              height: 15,
+              height: 30,
             ),
             ElevatedButton(
                 style: ElevatedButton.styleFrom(
+                minimumSize: Size(120, 50),
                 primary: Color.fromRGBO(170, 90, 191, 75), //background color of button
-                side: BorderSide(width:3, color:Colors.brown), //border width and color
+                side: BorderSide(width:3, color:const Color.fromARGB(255, 34, 32, 32)), //border width and color
                 elevation: 1, //elevation of button
                 shape: RoundedRectangleBorder( //to set border radius to button
                 borderRadius: BorderRadius.circular(15)
@@ -337,7 +338,7 @@ class _HomePageState extends State with SingleTickerProviderStateMixin {
                     url1="taro-image/"+resultList[0].toString()+".jpg";
                     url2="taro-image/"+resultList[1].toString()+".jpg";
                     url3="taro-image/"+resultList[2].toString()+".jpg";
-                    final String apiKey = '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'; // 将YOUR_API_KEY替换为您的OpenAI API密钥
+                    final String apiKey = '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'; // 将YOUR_API_KEY替换为您的OpenAI API密钥
                     final String apiUrl = 'https://api.openai.com/v1/engines/text-davinci-003/completions'; // GPT-3.5 Turbo API 端点
                     final Map<String, String> headers = {
                       'Content-Type': 'application/json',
@@ -387,6 +388,7 @@ class _HomePageState extends State with SingleTickerProviderStateMixin {
                           }
                         } else {
                           print('Error: ${response.statusCode} - ${response.reasonPhrase}');
+                          con = response.reasonPhrase;
                         }
                       }).catchError((error) {
                         print('Error: $error');
