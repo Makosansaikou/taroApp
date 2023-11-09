@@ -118,8 +118,9 @@ class _OnePageState extends State<OnePage> {
             // Horizontal Flipping
             ElevatedButton(
                 style: ElevatedButton.styleFrom(
+                minimumSize: Size(100, 50),
                 primary: Color.fromRGBO(170, 90, 191, 75), //background color of button
-                side: BorderSide(width:2, color:Colors.brown), //border width and color
+                side: BorderSide(width:2, color:Colors.white), //border width and color
                 elevation: 5, //elevation of button
                 shape: RoundedRectangleBorder( //to set border radius to button
                 borderRadius: BorderRadius.circular(15)
@@ -137,14 +138,16 @@ class _OnePageState extends State<OnePage> {
                 ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
+                minimumSize: Size(100, 50),
                 primary: Color.fromRGBO(170, 90, 191, 75), //background color of button
-                side: BorderSide(width:2, color:Colors.brown), //border width and color
+                side: BorderSide(width:2, color:Colors.white), //border width and color
                 elevation: 1, //elevation of button
                 shape: RoundedRectangleBorder( //to set border radius to button
                 borderRadius: BorderRadius.circular(15)
                 ),
                 padding: EdgeInsets.all(5) //content padding inside button
                 ),
+
                 onPressed: () {
                   String name = "感情";
                   Navigator.pushNamed(context, '/main', arguments: name);
@@ -156,8 +159,9 @@ class _OnePageState extends State<OnePage> {
                 ),
                 ElevatedButton(
                 style: ElevatedButton.styleFrom(
+                minimumSize: Size(100, 50),
                 primary: Color.fromRGBO(170, 90, 191, 75), //background color of button
-                side: BorderSide(width:2, color:Colors.brown), //border width and color
+                side: BorderSide(width:2, color:Colors.white), //border width and color
                 elevation: 1, //elevation of button
                 shape: RoundedRectangleBorder( //to set border radius to button
                 borderRadius: BorderRadius.circular(15)
